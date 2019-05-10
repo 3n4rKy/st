@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "Hack-10:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -87,29 +87,33 @@ float alpha = 0.92;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"black",   /* 256 -> bg */
-	"white",   /* 257 -> fg */
-	"#add8e6", /* 258 -> cursor */
-};
+      /* 8 normal colors */
+    "#073642",
+    "#dc322f",
+    "#859900",
+    "#b58900",
+    "#268bd2",
+    "#d33682",
+    "#2aa198",
+    "#eee8d5",
 
+    /* 8 bright colors */
+    "#002b36",
+    "#cb4b16",
+    "#586e75",
+    "#657b83",
+    "#839496",
+    "#6c71c4",
+    "#93a1a1",
+    "#fdf6e3",
+
+    [255] = 0,
+
+    /* more colors can be added after 255 to use with DefaultXX */
+    "#cccccc",
+    "#333333",
+
+};
 
 /*
  * Default colors (colorname index)
